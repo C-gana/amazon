@@ -11,7 +11,7 @@ products.forEach((product) => {
   <div class="product-name js-product-name">
     ${product.name}
   </div>
-  <div class="price">$<span class="js-price">${(product.price)}</span></div>
+  <div class="price">$<span class="js-price">${(product.priceCents/100).toFixed(2)}</span></div>
   <select class="js-quantity" name="quantity" id="">
     <option value="1">1</option>
     <option value="2">2</option>
