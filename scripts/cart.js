@@ -1,3 +1,4 @@
+/*
 //let cartQuantity = Number(localStorage.getItem('cartQuantity')) || 0;
 let cartQuantity = 0;
 let timeOutId;
@@ -60,3 +61,5 @@ buttonElement.forEach((value, i) => {
         product.image = productImageHTML;
     }
 });
+
+*/
