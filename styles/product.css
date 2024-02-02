@@ -4,12 +4,20 @@
 }
 
 .product {
-  width: 170px;
-  margin: 10px;
+  width: 229px;
+  height: 350px;
+  margin: 0px 10px;
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(186, 186, 186);
   padding: 10px;
+}
+
+.product-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
 }
 
 .product-image {
