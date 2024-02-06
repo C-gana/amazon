@@ -15,7 +15,7 @@ products.forEach((product) => {
     </div>
     <div class="rating">
       <img class="stars" src="images/ratings/rating-${product.rating.stars *10}.png" alt="" />
-      <div class="voters">${product.rating.voters}</div>
+      <div class="voters">${product.rating.count}</div>
     </div>
     <div class="price">$<span class="js-price">${(product.priceCents/100).toFixed(2)}</span></div>
     <select class="js-quantity" name="quantity" id="">
