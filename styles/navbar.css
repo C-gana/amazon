@@ -34,6 +34,27 @@
   transition: all 0.15s;
 }
 
+.min-logo {
+  width: 35px;
+  padding: 8px;
+  display: none;
+}
+
+@media (max-width:900px) {
+  .min-logo {
+    display: block;
+  }
+
+  .logo {
+    display: flex;
+    place-content: center;
+  }
+
+  .main-logo {
+    display: none;
+  }
+}
+
 .logo-container:hover {
   border: 1px solid white;
   margin: -1px 9px;
