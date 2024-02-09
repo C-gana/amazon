@@ -29,7 +29,7 @@
 
 .product {
   flex: 1;
-  height: 410px;
+  height: 420px;
   display: flex;
   flex-direction: column;
   border-right: 1px solid rgb(186, 186, 186);
@@ -112,8 +112,8 @@ select {
 }
 
 .added-confirmation {
-  height: 20px;
-  margin: 10px;
+  height: 50px;
+  padding-top: 10px;
   position: relative;
 }
 

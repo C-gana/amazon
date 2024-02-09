@@ -1,4 +1,5 @@
 let productsHTML = "";
+let timeOutId;
 
 products.forEach((product) => {
   const html = `
@@ -46,15 +47,19 @@ products.forEach((product) => {
 
 document.querySelector(".js-products").innerHTML = productsHTML;
 
-//making the add button responsive and adding products to cart
+//making the add button interactive and adding products to cart
 document.querySelectorAll(".js-add-button").forEach((button, i) => {
   button.addEventListener("click", () => {
     //getting the product id from the dataset attribute
     const productId = button.dataset.productId;
     const quantityElement = document.querySelectorAll(".js-quantity");
+    const displayElement = document.querySelectorAll(".js-added-confirmation");
+    let displayAddConfirmation = displayElement[i];
     const quantity = Number(quantityElement[i].value);
+    const html = `<img src="images/icons/checkmark.png" alt="" /> <p>Added</p>`;
     let matchingItem;
 
+    // checking the cart if a product is already there
     cart.forEach((item) => {
       if (productId === item.productId) {
         matchingItem = item;
@@ -70,6 +75,16 @@ document.querySelectorAll(".js-add-button").forEach((button, i) => {
       });
     }
 
-    console.log(cart);
+    //updating the cart quantity in both the cartQuantity variable and cart DOM
+    cartQuantity += quantity;
+    updateCartQuantity();
+
+    // the added confirmation message
+    //clearing  last timeout Id to prevent delays with the previous one
+    clearTimeout(timeOutId);
+    timeOutId = setTimeout(() => {
+      displayAddConfirmation.innerHTML = "";
+    }, 2000);
+    displayAddConfirmation.innerHTML = html;
   });
 });
