@@ -78,6 +78,7 @@ document.querySelectorAll(".js-add-button").forEach((button, i) => {
         //updating the cart quantity in both the cartQuantity variable and cart DOM
         cartQuantity += quantity;
         //storing the cart in the local storage
+        localStorage.setItem("cart", JSON.stringify(cart));
         localStorage.setItem("cartQuantity", JSON.stringify(cartQuantity));
         updateCartQuantity();
 
