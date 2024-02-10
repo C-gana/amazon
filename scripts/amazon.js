@@ -86,7 +86,7 @@ document.querySelectorAll(".js-add-button").forEach((button, i) => {
         clearTimeout(timeOutId);
         timeOutId = setTimeout(() => {
             displayAddConfirmation.innerHTML = "";
-        }, 2000);
+        }, 900);
         displayAddConfirmation.innerHTML = html;
     });
 });

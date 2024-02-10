@@ -1,8 +1,14 @@
 let cart = [];
-let cartQuantity = JSON.parse(localStorage.getItem("cartQuantity")) || 0;
+let cartQuantity =
+    Number(JSON.parse(localStorage.getItem("cartQuantity"))) || 0;
+const cartElement = document.querySelector(".js-cart-count");
 updateCartQuantity();
 
 function updateCartQuantity() {
-    const cartElement = document.querySelector(".js-cart-count");
     cartElement.innerHTML = cartQuantity;
 }
+
+document.querySelector(".cart").addEventListener("click", () => {
+    localStorage.removeItem("cartQuantity");
+    cartElement.innerHTML = 0;
+});
